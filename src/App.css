@@ -1,5 +1,12 @@
-body{
+#root{
+    margin-top: 2%;
     background-color: blue;
+    border:2em red outset;
+    height: 500px;
+}
+
+body{
+    background-color: yellow;
 }
 
 #box{
@@ -55,8 +62,7 @@ body{
     top: 0; 
     right: 0;
     color: #111; 
-    padding-top: 90px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    padding-top: 90px; 
 }
 
 button{
@@ -73,3 +79,31 @@ button{
 button:hover {
     color: darkgoldenrod;
   }
+
+  #transitions{
+      width: 400px;
+      height: 400px;
+      font-size: 24px;
+      color: darkslategrey;
+    background-color: rgb(228, 95, 95);
+    position: relative;
+    margin: auto;
+    margin-top: 3%;
+    transition-property: background; /*now it will fade into the onHove color*/
+    transition-duration: 3s;
+  }
+
+  #transitions:hover{
+    background-color: red;
+    color: whitesmoke;
+  }
+
+  #transitions:hover:after{  /*notice the event you want to do something "AFTER"*/
+    content: " Shading...";
+    font-size: 75px;
+    position: relative;
+    opacity: 1;
+    top: 20px;
+    -webkit-transition: all 3s;
+    transition: all 3s;
+}
