@@ -11,6 +11,7 @@ function Page1(props) {
         e.preventDefault();
         setTimeout(() => {
             document.getElementById("transitions").innerHTML = "Hover over me!";
+            document.getElementById("transitions").style.textAlign = "center";
         }, 2000);
     }
 
@@ -20,6 +21,7 @@ function Page1(props) {
         <div id="container">
             <div id="transitions" onMouseEnter={(e) => {removeText(e)}} onMouseLeave={(e) => {putTextBack(e)}}><center>Hover over me!</center></div>
         </div>
+        <button id="rotate">Lets rotate!</button>
         <div id="navbar">
         <a href={"/"}><button>Home</button></a><br/>
         <button>Page2</button><br/>

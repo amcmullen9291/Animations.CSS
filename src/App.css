@@ -89,17 +89,19 @@ button:hover {
     position: relative;
     margin: auto;
     margin-top: 3%;
-    transition-property: background; /*now it will fade into the onHove color*/
-    transition-duration: 3s;
+    transition-property: background, border-radius; /*now it will fade into the onHove color*/
+    transition-duration: 3s, 6s;
   }
 
   #transitions:hover{
     background-color: red;
-    color: whitesmoke;
+    border-radius: 15%;
   }
 
   #transitions:hover:after{  /*notice the event you want to do something "AFTER"*/
     content: " Shading...";
+    color: rgb(228, 95, 95);
+    text-decoration: underline;
     font-size: 75px;
     position: relative;
     opacity: 1;
@@ -107,3 +109,19 @@ button:hover {
     -webkit-transition: all 3s;
     transition: all 3s;
 }
+
+#rotate{
+    visibility: visible;
+    height:75px;
+    width: 75px;
+    border-radius: 75px;
+    font-size: 36px;
+    padding: 3rem;
+    margin-bottom: 5%;
+    margin-left: 1%;
+    color: whitesmoke;
+    background-color: orangered;
+    top: 15%;
+    position:absolute;
+}
+
