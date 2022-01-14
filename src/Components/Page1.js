@@ -24,7 +24,10 @@ function Page1(props) {
         <button id="rotate">Lets rotate!</button>
         <span id="rotateArea">
             <div>Rotate Area</div><hr/>
-            <div>demo area</div>
+            <br/>
+            <div id="rotatingSquare">
+            </div>
+            <span class="spinner rotate"><center></center></span>
         </span>
         <div id="navbar">
         <a href={"/"}><button>Home</button></a><br/>

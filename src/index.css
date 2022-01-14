@@ -14,3 +14,34 @@
     font-size: 24px;
     text-align: center;
 }
+
+#rotatingSquare{
+    background-color: white;
+    height: 3em;
+    width: 3em;
+    margin: auto;
+    position: relative;
+}
+.rotate{
+    background-color: blue;
+    animation: rotate 10s linear infinite; 
+  }
+
+  .rotate:before{
+      content: "what!?!?";
+      color: yellow;
+  }
+  @keyframes rotate{
+    from{transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+    to{transform: rotateX(360deg) rotateY(1800deg) rotateZ(360deg);}
+    /* to{ transform: rotate(360deg); }   */
+    /*lower one makes it go on one axis, X or Y...*/
+}
+  
+    .spinner{
+      margin-left: 2%;/*me....*/
+    display:inline-block; width: 50px; height: 50px;
+    border-radius: 50%; 
+    box-shadow: inset -2px 0 0 2px whitesmoke; 
+  }
+
