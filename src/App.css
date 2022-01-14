@@ -14,6 +14,7 @@ body{
     animation-iteration-count: 1;
     animation-timing-function: linear;
     animation-fill-mode: forwards; /*stops loop without a reset*/
+    /*...IF you dont start and stop in the same place/shape*/
 }
 
 @keyframes myAnimation {
