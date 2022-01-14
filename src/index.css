@@ -1,0 +1,16 @@
+#rotateArea{
+    visibility: visible;
+    border: 3px solid red;
+    background-color: orange;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 50%;
+    left: 5%;
+}
+
+#rotateArea div{
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}

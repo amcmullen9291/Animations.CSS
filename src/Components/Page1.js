@@ -22,6 +22,10 @@ function Page1(props) {
             <div id="transitions" onMouseEnter={(e) => {removeText(e)}} onMouseLeave={(e) => {putTextBack(e)}}><center>Hover over me!</center></div>
         </div>
         <button id="rotate">Lets rotate!</button>
+        <span id="rotateArea">
+            <div>Rotate Area</div><hr/>
+            <div>demo area</div>
+        </span>
         <div id="navbar">
         <a href={"/"}><button>Home</button></a><br/>
         <button>Page2</button><br/>
