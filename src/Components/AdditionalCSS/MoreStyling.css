@@ -36,7 +36,6 @@
  #wavytext{
     display: flex;
     top: 10%;
-    color: green;
     font-size:75px;
     margin: 0;
     padding: 0;
@@ -52,7 +51,7 @@
 .wavy{
     position: relative;
     -webkit-box-reflect:below -12px linear-gradient(transparent, rgba(0,0,0,0.2));
-    /* above line give it the watery reflection effect. very nice */
+    /* above line give it the watery reflection effect. very nice but dont use in production */
 }
 
 .wavy span{
@@ -68,6 +67,7 @@
     20%{transform: translateY(-20px);}
     40%, 100%{transform: translateY(0px);}
 }
+
 /* /dont use inline CSS... */
 #wavytext > div > span:nth-child(1){
     --jump:0;
