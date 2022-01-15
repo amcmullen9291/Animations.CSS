@@ -74,7 +74,7 @@
   .topnav:hover:after{
     content: "Nice.";
     /* color: rgb(6, 42, 161); */
-    color: whitesmoke;
+    color: blue;
     font-size: 18px;
     text-align: left;
 

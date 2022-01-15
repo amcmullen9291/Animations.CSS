@@ -1,0 +1,107 @@
+#hoppingtext{
+    display: flex;
+    top: 10%;
+    color: green;
+    font-size:75px;
+    margin: 0;
+    padding: 0;
+    font-family: consolas;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    left:10%;
+    margin-top: 5%;
+}
+
+.hop{
+    position: relative;
+    -webkit-box-reflect:below -12px linear-gradient(transparent, rgba(0,0,0,0.2));
+    /* above line give it the watery reflection effect. very nice */
+}
+
+.hop span{
+    position:relative;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-transform: lowercase;
+    animation: animate 1s ease-in-out infinite;
+}
+@keyframes animate {
+    0%{transform: translateY(0px);}
+    20%{transform: translateY(-20px);}
+    /* you dont need any more for a simple hop */
+}
+ /* wavy hopping text */
+
+ #wavytext{
+    display: flex;
+    top: 10%;
+    color: green;
+    font-size:75px;
+    margin: 0;
+    padding: 0;
+    font-family: consolas;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    right:0;
+    margin-right: 45%;
+    margin-top: 19%;
+}
+
+.wavy{
+    position: relative;
+    -webkit-box-reflect:below -12px linear-gradient(transparent, rgba(0,0,0,0.2));
+    /* above line give it the watery reflection effect. very nice */
+}
+
+.wavy span{
+    position:relative;
+    display: inline-block;
+    color: var(--color);
+    text-transform: lowercase;
+    animation: animateWave 1s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--jump));
+}
+@keyframes animateWave {
+    0%{transform: translateY(0px);}
+    20%{transform: translateY(-20px);}
+    40%, 100%{transform: translateY(0px);}
+}
+/* /dont use inline CSS... */
+#wavytext > div > span:nth-child(1){
+    --jump:0;
+    --color: black;
+}
+#wavytext > div > span:nth-child(2){
+    --jump:1;
+    --color: purple;
+}
+#wavytext > div > span:nth-child(3){
+    --jump:2;
+    --color: rgb(163, 163, 108);
+}
+#wavytext > div > span:nth-child(4){
+    --jump:3;
+    --color: rgb(27, 142, 146);
+}
+#wavytext > div > span:nth-child(5){
+    --jump:4;
+    --color: rgb(146, 11, 11);
+}
+#wavytext > div > span:nth-child(6){
+    --jump:5;
+    --color: rgb(56, 21, 211);
+}
+#wavytext > div > span:nth-child(7){
+    --jump:6;
+    --color: rgb(63, 10, 73);
+}
+#wavytext > div > span:nth-child(8){
+    --jump: 7.5;
+    --color: rgb(27, 122, 51);
+}
+#wavytext > div > span:nth-child(9){
+    --jump:9;
+    --color: rgb(143, 94, 206);
+}
