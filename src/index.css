@@ -108,3 +108,13 @@
     background-color: #04AA6D;
     color: white;
   }
+
+  .homeLink{
+      font-size: 60px;
+      color: grey;
+      text-decoration: none;
+  }
+
+  .homeLink:before{
+      content: "return home";
+  }
