@@ -3,6 +3,12 @@ import React from 'react';
 function Welcome(props) {
     return (
         <>
+        <div class="topnav">
+            <span class="active"></span>
+            <a href="/testArea"></a>
+            <a href="/testArea"></a>
+            <a href="/testArea"></a><br/>
+        </div>
         <div id="container">
                 <div id="box"></div>
                 <div id="navbar">

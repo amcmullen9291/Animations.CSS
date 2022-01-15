@@ -39,8 +39,72 @@
 }
   
     .spinner{
-      margin-left: 2%;/*me....*/
+      margin-left: 2%;/*(me....)*/
     display:inline-block; width: 50px; height: 50px;
     border-radius: 50%; 
     box-shadow: inset -2px 0 0 2px whitesmoke; 
+  }
+
+  /* navBar */
+  .topnav {
+    background-color: transparent;
+    overflow: hidden;
+    width: 20%;
+    height:50px;
+    border: 3px solid transparent;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav:hover {
+    animation-name: changeBorder;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+
+  .topnav:hover:after{
+    content: "Nice.";
+    color: rgb(6, 42, 161);
+    font-size: 18px;
+    text-align: left;
+
+  }
+
+  @keyframes changeBorder {
+    0% {
+      border: 3px solid #996633;
+      background-color: #339933;
+    }
+    25% {
+        border: 3px solid #339933;
+    }
+    50% {
+        border: 3px solid #336699;
+    }
+    75% {
+        /* border: 3px solid #9e539e; */
+        /*less color changes to get back to the normal color*/
+    }
+    90%{
+        /* border: 3px solid rgb(118, 69, 173); */
+    }
+    95%{
+        /* border: 3px solid #9e539e; */
+    }
+    100% {
+        border: 3px solid blue;
+    }
+  }
+
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
   }
