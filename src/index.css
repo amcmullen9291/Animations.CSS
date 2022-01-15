@@ -45,7 +45,7 @@
     box-shadow: inset -2px 0 0 2px whitesmoke; 
   }
 
-  /* navBar */
+  /* navBar  for hidden workarea*/
   .topnav {
     background-color: transparent;
     overflow: hidden;
@@ -118,3 +118,33 @@
   .homeLink:before{
       content: "return home";
   }
+/* --------------------- */
+
+#oneSideGradient{
+  --angle: 0deg;
+  width: 9em;
+  height: 9em;
+  border: 2em solid;
+  margin-left: 9%;
+  margin-top: 9%;
+  border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
+  animation: 10s rotate linear infinite;
+  border-right:none;
+  border-bottom: none;
+  border-top: none;
+  padding: 8px;
+  color: antiquewhite;
+  font-size: 18px;;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+ /* should not throw an error. Works in Chrome browsers */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
