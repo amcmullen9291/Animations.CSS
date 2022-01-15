@@ -23,15 +23,16 @@ function Page1(props) {
         </div>
         <button id="rotate">Lets rotate!</button>
         <span id="rotateArea">
-            <div>Rotate Area</div><hr/>
+            <div id="titleArea">3D Area</div><hr/>
             <br/>
             <div id="rotatingSquare">
+                <center><a href={"/Page2"}>Enter</a></center>
             </div>
             <span class="spinner rotate"><center></center></span>
         </span>
         <div id="navbar">
         <a href={"/"}><button>Home</button></a><br/>
-        <button>Page2</button><br/>
+        <a href={"/Page2"}><button>Page2</button></a><br/>
         <button>Page3</button><br/>
         <button>Page4</button><br/>
       </div>

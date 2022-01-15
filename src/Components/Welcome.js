@@ -7,9 +7,9 @@ function Welcome(props) {
                 <div id="box"></div>
                 <div id="navbar">
                     <a href={"/page1"}><button>Page1</button></a><br/>
-                    <button>Page2</button><br/>
-                    <button>Page3</button><br/>
-                    <button>Page4</button><br/>
+                    <a href={"/page2"}><button>Page2</button></a><br/>
+                    <a href={"/page3"}><button>Page3</button></a><br/>
+                    <a href={"/page4"}><button>Page4</button></a><br/>
                 </div>
         </div>
       </>
