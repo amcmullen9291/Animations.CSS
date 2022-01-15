@@ -4,7 +4,8 @@ function Page3(props) {
     return (
         <>
         <br/>
-        <div id="oneSideGradient">"A One sided conic gradient border"</div>
+        <div id="oneSideGradient">"A One sided conic gradient border"</div><br/>
+        <div id="oneSideGradientReverse">"A One sided conic gradient border... in reverse"</div>
         <br/>
         <div id="navbar">
             <a href={"/Page1"}><button>Page1</button></a><br/>

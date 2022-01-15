@@ -148,3 +148,35 @@
   initial-value: 0deg;
   inherits: false;
 }
+
+/* gradient direction testing */
+#oneSideGradientReverse{
+  --angle: 0deg;
+  width: 9em;
+  height: 9em;
+  border: 2em solid;
+  position: absolute;
+  left: 29%;
+  top: 29%;
+  border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
+  animation: 5s rotate linear infinite;
+  animation-direction: reverse;
+  border-right:none;
+  border-bottom: none;
+  border-top: none;
+  padding: 8px;
+  color: antiquewhite;
+  font-size: 18px;;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+ /* should not throw an error. Works in Chrome browsers */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
