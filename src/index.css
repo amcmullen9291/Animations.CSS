@@ -1,3 +1,4 @@
+/* page2 3D circle */
 #rotateArea{
     visibility: visible;
     border: 3px solid red;
@@ -72,7 +73,8 @@
 
   .topnav:hover:after{
     content: "Nice.";
-    color: rgb(6, 42, 161);
+    /* color: rgb(6, 42, 161); */
+    color: whitesmoke;
     font-size: 18px;
     text-align: left;
 
@@ -82,9 +84,13 @@
     0% {
       border: 3px solid #996633;
       background-color: #339933;
+      filter: sepia(0);
+      opacity: .25;
+      /* above 2 line produce a warm flash effect */
     }
     25% {
         border: 3px solid #339933;
+        opacity: 1;
     }
     50% {
         border: 3px solid #336699;
@@ -108,6 +114,8 @@
     background-color: #04AA6D;
     color: white;
   }
+
+  /* testArea home link */
 
   .homeLink{
       font-size: 60px;
