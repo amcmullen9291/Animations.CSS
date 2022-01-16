@@ -174,18 +174,6 @@ animation: rotate3DText 6s ease-in-out;
 animation-iteration-count: 2; 
 color: hsl(var(--hue), 75%, 75%);
 }
-
-/* bottom example of 3D */
-#secondText{
-    position: relative;
-    width: 25px;
-    height: 120px;
-    overflow: hidden;
-    animation: none;
-    /* animation-iteration-count: 3; change to infinite */
-    color: hsl(var(--hue), 75%, 75%);
-    }
-    /* end bottom example */
     
 
 @keyframes rotate3DText {
@@ -193,10 +181,6 @@ color: hsl(var(--hue), 75%, 75%);
     to{ transform: rotateY(360deg);}
 } /*opened and closed blinds*/
 
-@keyframes rotate3DText2 {
-    from{ transform: rotateX(0deg);}
-    to{ transform: rotateY(0deg);}
-}
 
 .TextPanel:nth-child(1) {
     --left: 0px;
@@ -327,12 +311,3 @@ color: hsl(var(--hue), 75%, 75%);
     font-size: 96px;
     width: max-content;
     }
-
-    #secondText::before{
-        position: absolute;
-        left: var(--left);
-        content: "Styling CSS";
-        color: white;
-        font-size: 96px;
-        width: max-content;
-        }
