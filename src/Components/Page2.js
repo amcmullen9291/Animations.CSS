@@ -4,16 +4,7 @@ import './AdditionalCSS/MoreStyling.css';
 function Page2(props) {
     return (
         <>
-        <div id="hoppingtext">
-          <div className="hop">
-              <span>H</span>
-              <span>E</span>
-              <span>L</span>
-              <span>L</span>
-              <span>O</span>
-              <span>.</span>
-          </div>
-        </div>
+        <div><h1 id="welcomeImage">Wisconsin</h1></div>
         <div id="wavytext">
           <div className="wavy">
               <span>H</span>

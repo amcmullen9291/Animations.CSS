@@ -129,3 +129,23 @@
     border-radius: 50%; 
     box-shadow: inset -2px 0 0 2px whitesmoke; 
   }
+
+  #welcomeImage{
+      border: 4px solid green;
+      position: absolute;
+    background-image: url(../Images/tanFlannel.jpg);
+            background-repeat: repeat;
+            /* no repeat will limit the text length */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            top: 20%;
+            left:5%;
+            font-size: 125px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: 'Steelfish Rg', 'helvetica neue',
+                     helvetica, arial, sans-serif;
+            font-weight: 800;
+            -webkit-font-smoothing: antialiased;
+  }
