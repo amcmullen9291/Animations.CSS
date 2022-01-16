@@ -1,190 +1,189 @@
-/* page2 3D circle */
 #rotateArea{
-    visibility: visible;
-    border: 3px solid red;
-    background-color: orange;
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    top: 50%;
-    left: 5%;
+  visibility: visible;
+  border: 3px solid red;
+  background-color: orange;
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  top: 50%;
+  left: 5%;
 }
 
 #rotateArea div{
-    color: white;
-    font-size: 24px;
-    text-align: center;
+  color: white;
+  font-size: 24px;
+  text-align: center;
 }
 
 #rotatingSquare{
-    background-color: white;
-    height: 3em;
-    width: 3em;
-    margin: auto;
-    position: relative;
+  background-color: white;
+  height: 3em;
+  width: 3em;
+  margin: auto;
+  position: relative;
 }
 .rotate{
-    background-color: blue;
-    animation: rotate 10s linear infinite; 
-  }
-
-  .rotate:before{
-      content: "what!?!?";
-      color: yellow;
-  }
-  @keyframes rotate{
-    from{transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
-    to{transform: rotateX(360deg) rotateY(1800deg) rotateZ(360deg);}
-    /* to{ transform: rotate(360deg); }   */
-    /*lower one makes it go on one axis, X or Y...*/
+  background-color: blue;
+  animation: rotate 10s linear infinite; 
 }
-  
-    .spinner{
-      margin-left: 2%;/*(me....)*/
-    display:inline-block; width: 50px; height: 50px;
-    border-radius: 50%; 
-    box-shadow: inset -2px 0 0 2px whitesmoke; 
-  }
 
-  /* navBar  for hidden workarea*/
-  .topnav {
-    background-color: transparent;
-    overflow: hidden;
-    width: 20%;
-    height:50px;
-    border: 3px solid transparent;
+.rotate:before{
+    content: "what!?!?";
+    color: yellow;
+}
+@keyframes rotate{
+  from{transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+  to{transform: rotateX(360deg) rotateY(1800deg) rotateZ(360deg);}
+  /* to{ transform: rotate(360deg); }   */
+  /*lower one makes it go on one axis, X or Y...*/
+}
+
+  .spinner{
+    margin-left: 2%;/*(me....)*/
+  display:inline-block; width: 50px; height: 50px;
+  border-radius: 50%; 
+  box-shadow: inset -2px 0 0 2px whitesmoke; 
+}
+
+/* navBar  for hidden workarea*/
+.topnav {
+  background-color: transparent;
+  overflow: hidden;
+  width: 20%;
+  height:50px;
+  border: 3px solid transparent;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav:hover {
+  animation-name: changeBorder;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+.topnav:hover:after{
+  content: "Nice.";
+  /* color: rgb(6, 42, 161); */
+  color: blue;
+  font-size: 18px;
+  text-align: left;
+
+}
+
+@keyframes changeBorder {
+  0% {
+    border: 3px solid #996633;
+    background-color: #339933;
+    filter: sepia(0);
+    opacity: .25;
+    /* above 2 line produce a warm flash effect */
   }
-  
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+  25% {
+      border: 3px solid #339933;
+      opacity: 1;
+  }
+  50% {
+      border: 3px solid #336699;
+  }
+  75% {
+      /* border: 3px solid #9e539e; */
+      /*less color changes to get back to the normal color*/
+  }
+  90%{
+      /* border: 3px solid rgb(118, 69, 173); */
+  }
+  95%{
+      /* border: 3px solid #9e539e; */
+  }
+  100% {
+      border: 3px solid blue;
+  }
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* testArea home link */
+
+.homeLink{
+    font-size: 60px;
+    color: grey;
     text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .topnav:hover {
-    animation-name: changeBorder;
-    animation-duration: 4s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-  }
+}
 
-  .topnav:hover:after{
-    content: "Nice.";
-    /* color: rgb(6, 42, 161); */
-    color: blue;
-    font-size: 18px;
-    text-align: left;
-
-  }
-
-  @keyframes changeBorder {
-    0% {
-      border: 3px solid #996633;
-      background-color: #339933;
-      filter: sepia(0);
-      opacity: .25;
-      /* above 2 line produce a warm flash effect */
-    }
-    25% {
-        border: 3px solid #339933;
-        opacity: 1;
-    }
-    50% {
-        border: 3px solid #336699;
-    }
-    75% {
-        /* border: 3px solid #9e539e; */
-        /*less color changes to get back to the normal color*/
-    }
-    90%{
-        /* border: 3px solid rgb(118, 69, 173); */
-    }
-    95%{
-        /* border: 3px solid #9e539e; */
-    }
-    100% {
-        border: 3px solid blue;
-    }
-  }
-
-  .topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
-
-  /* testArea home link */
-
-  .homeLink{
-      font-size: 60px;
-      color: grey;
-      text-decoration: none;
-  }
-
-  .homeLink:before{
-      content: "return home";
-  }
+.homeLink:before{
+    content: "return home";
+}
 /* --------------------- */
 
 #oneSideGradient{
-  --angle: 0deg;
-  width: 9em;
-  height: 9em;
-  border: 2em solid;
-  margin-left: 9%;
-  margin-top: 9%;
-  border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
-  animation: 10s rotate linear infinite;
-  border-right:none;
-  border-bottom: none;
-  border-top: none;
-  padding: 8px;
-  color: antiquewhite;
-  font-size: 18px;;
+--angle: 0deg;
+width: 9em;
+height: 9em;
+border: 2em solid;
+margin-left: 9%;
+margin-top: 9%;
+border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
+animation: 10s gradientFlowUp linear infinite;
+border-right:none;
+border-bottom: none;
+border-top: none;
+padding: 8px;
+color: antiquewhite;
+font-size: 18px;;
 }
 
-@keyframes rotate {
-  to {
-    --angle: 360deg;
-  }
+@keyframes gradientFlowUp {
+to {
+  --angle: 360deg;
 }
- /* should not throw an error. Works in Chrome browsers */
+}
+/* should not throw an error. Works in Chrome browsers */
 @property --angle {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
+syntax: '<angle>';
+initial-value: 0deg;
+inherits: false;
 }
 
 /* gradient direction testing */
 #oneSideGradientReverse{
-  --angle: 0deg;
-  width: 9em;
-  height: 9em;
-  border: 2em solid;
-  position: absolute;
-  left: 29%;
-  top: 29%;
-  border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
-  animation: 5s rotate linear infinite;
-  animation-direction: reverse;
-  border-right:none;
-  border-bottom: none;
-  border-top: none;
-  padding: 8px;
-  color: antiquewhite;
-  font-size: 18px;;
+--angle: 0deg;
+width: 9em;
+height: 9em;
+border: 2em solid;
+position: absolute;
+left: 29%;
+top: 29%;
+border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
+animation: 5s gradientFlowDown linear infinite;
+animation-direction: reverse;
+border-right:none;
+border-bottom: none;
+border-top: none;
+padding: 8px;
+color: antiquewhite;
+font-size: 18px;;
 }
 
-@keyframes rotate {
-  to {
-    --angle: 360deg;
-  }
+@keyframes gradientFlowDown {
+to {
+  --angle: 360deg;
 }
- /* should not throw an error. Works in Chrome browsers */
+}
+/* should not throw an error. Works in Chrome browsers */
 @property --angle {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
+syntax: '<angle>';
+initial-value: 0deg;
+inherits: false;
 }
