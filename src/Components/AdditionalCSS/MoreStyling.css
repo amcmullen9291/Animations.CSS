@@ -59,7 +59,8 @@
     display: inline-block;
     color: var(--color);
     text-transform: lowercase;
-    animation: animateWave 1s ease-in-out infinite;
+    animation: animateWave 1s ease-in-out;
+    animation-iteration-count: 1;
     animation-delay: calc(0.1s * var(--jump));
 }
 @keyframes animateWave {
@@ -136,6 +137,7 @@
     background-image: url(../Images/tanFlannel.jpg);
             background-repeat: repeat;
             /* no repeat will limit the text length */
+            background-clip: none;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             top: 20%;
@@ -149,3 +151,188 @@
             font-weight: 800;
             -webkit-font-smoothing: antialiased;
   }
+
+  /* text rotating around an invisible 3D object */
+  #Text3DArea{
+    color: #fff;
+    min-height: 70vh;
+    display: grid;
+    place-items: center;
+    perspective: 500px;
+}
+
+.TextBanner{
+display: flex;
+}
+
+.TextPanel{
+position: relative;
+width: 25px;
+height: 120px;
+overflow: hidden;
+animation: rotate3DText 6s ease-in-out;
+animation-iteration-count: 2; 
+color: hsl(var(--hue), 75%, 75%);
+}
+
+/* bottom example of 3D */
+#secondText{
+    position: relative;
+    width: 25px;
+    height: 120px;
+    overflow: hidden;
+    animation: none;
+    /* animation-iteration-count: 3; change to infinite */
+    color: hsl(var(--hue), 75%, 75%);
+    }
+    /* end bottom example */
+    
+
+@keyframes rotate3DText {
+    from{ transform: rotateX(0deg);}
+    to{ transform: rotateY(360deg);}
+} /*opened and closed blinds*/
+
+@keyframes rotate3DText2 {
+    from{ transform: rotateX(0deg);}
+    to{ transform: rotateY(0deg);}
+}
+
+.TextPanel:nth-child(1) {
+    --left: 0px;
+    --hue: 0;
+    }
+    
+    .TextPanel:nth-child(2) {
+    --left: -25px;
+    --hue: 15;
+    }
+    
+    .TextPanel:nth-child(3){
+    --left: -50px;
+    --hue: 30;
+    }
+    
+    .TextPanel:nth-child(4){
+    --left: -75px;
+    --hue: 45;
+    }
+    
+    .TextPanel:nth-child(5){
+    --left: -100px;
+    --hue: 60;
+    }
+    
+    .TextPanel:nth-child(6) {
+    --left: -125px;
+    --hue: 75;
+    }
+    
+    .TextPanel:nth-child(7){
+    --left: -150px;
+    --hue: 90;
+    }
+    
+    .TextPanel:nth-child(8){
+    --left: -175px;
+    --hue: 105;
+    }
+    
+    .TextPanel:nth-child(9){
+    --left: -200px;
+    --hue: 120;
+    }
+    
+    .TextPanel:nth-child(10) {
+    --left: -225px;
+    --hue: 135;
+    }
+    
+    .TextPanel:nth-child(11){
+    --left: -250px;
+    --hue: 150;
+    }
+    
+    .TextPanel:nth-child(12){
+    --left: -275px;
+    --hue: 165;
+    }
+    
+    .TextPanel:nth-child(13){
+    --left: -300px;
+    --hue: 180;
+    }
+    
+    .TextPanel:nth-child(14) {
+    --left: -325px;
+    --hue: 195;
+    }
+    
+    .TextPanel:nth-child(15){
+    --left: -350px;
+    --hue: 210;
+    }
+    
+    .TextPanel:nth-child(16){
+    --left: -375px;
+    --hue: 225;
+    }
+    
+    .TextPanel:nth-child(17){
+    --left: -400px;
+    --hue: 240;
+    }
+    
+    .TextPanel:nth-child(18) {
+    --left: -425px;
+    --hue: 155;
+    }
+    .TextPanel:nth-child(19) {
+    --left: -450px;
+    --hue: 270;
+    }
+        .TextPanel:nth-child(20) {
+    --left: -475px;
+    --hue: 285;
+    }
+    .TextPanel:nth-child(21) {
+    --left: -500px;
+    --hue: 300;
+    }
+    .TextPanel:nth-child(22) {
+    --left: -525px;
+    --hue: 315;
+    }
+    .TextPanel:nth-child(23) {
+    --left: -550px;
+    --hue: 330;
+    }
+    .TextPanel:nth-child(24) {
+    --left: -575px;
+    --hue: 345;
+    }
+    .TextPanel:nth-child(25) {
+    --left: -600px;
+    --hue: 360;
+    }
+    
+    .TextPanel:hover{
+    transform: scale(1.2);
+    }
+    
+    .TextPanel::before{
+    position: absolute;
+    left: var(--left);
+    content: "𝙲𝚂𝚂 𝚂𝚝𝚢𝚕𝚒𝚗𝚐";
+    font-size: 96px;
+    width: max-content;
+    }
+
+    #secondText::before{
+        position: absolute;
+        left: var(--left);
+        content: "Styling CSS";
+        color: white;
+        font-size: 96px;
+        width: max-content;
+        }
