@@ -30,13 +30,19 @@
 
   #loader1{
     --b: 30px;  
-    --n: 4;    
-    --g: 25deg; 
-    --c: green;
-    --s: 1s;
+    --n: 20;    
+    --g: 5deg; 
+    --c: silver;
+    --s: 3s;
     position: absolute;
     top: 65%;
-    left: 59%;
+    left: 62%;
+    border: 1px solid black;
+    width: 50px;
+    background-color: purple;
+    animation-direction:alternate;
+    animation-delay: 3s;
+    opacity: 49%;
   }
 
   #loader2{
@@ -52,16 +58,18 @@ left: 15%;
   }
 
   #loader3{
-    --b: 5px;
+    --b: 15px;
     --c: rgb(221, 236, 10);
     width: 80px;
-    --n: 6;
+    --n: 9;
     --g: 20deg;
     --s: 3s;
     position: absolute;
     right: 0;
     margin-right: 15%;
-    top: 49%;  
+    top: 49%;
+    border-radius: 99%;
+    background-color: green;
 }
 
 #loader4{
@@ -90,7 +98,7 @@ left: 15%;
 
   .loadingBar {
     --n:5;    
-    --s:30px; 
+    --s:30px;
     --g:5px;  
  
     width:calc(var(--n)*(var(--s) + var(--g)) - var(--g));
@@ -107,7 +115,7 @@ left: 15%;
     animation: loadBar var(--speed) steps(calc(var(--n) + 1)) infinite;
   }
   @keyframes loadBar {
-    0% {background-size: 0% 100%}
+    0% {background-size: 0% 100%};
   }
 
   #loadingBar1{
@@ -115,10 +123,11 @@ left: 15%;
       top: 50%;
       left: 35%;
     --s:10px;
-    --n:10;
-    color:red;
+    --n:10;  
     --g:5px; 
+    color:red;
     --speed: 3s;
+    border: 3px solid gray;
   }
 
   #loadingBar2{
@@ -139,6 +148,7 @@ left: 15%;
     border-radius:50px;
     color:orange;
     --speed: 3s;
+    border:3px;
   }
 
   #page4Home{
@@ -146,3 +156,98 @@ left: 15%;
       top: 9%;
       text-decoration: underline;
   }
+
+  /* gradient bumps; all change color at same time */
+  .dot {
+    position:absolute;
+    top:25%;
+    right: 20%;
+    margin:20px auto;
+    color:darkblue;
+    width:95px;
+    height:40px;
+    --d:radial-gradient(farthest-side,currentColor 90%,#0000);
+    background:var(--d),var(--d),var(--d),var(--d);
+    background-size:20px 20px;
+    background-repeat:no-repeat;
+    animation: m 1s infinite;
+  }
+  
+  @keyframes m {
+    0%   {background-position:calc(0*100%/3) 100%, calc(1*100%/3) 100%, calc(2*100%/3) 100%, calc(3*100%/3) 100%;}
+    0%{color: red;}
+    12.5%{background-position:calc(0*100%/3) 0   , calc(1*100%/3) 100%, calc(2*100%/3) 100%, calc(3*100%/3) 100%;}
+    /* 12.5%{color: orange;} */
+    25%  {background-position:calc(0*100%/3) 0   , calc(1*100%/3) 0   , calc(2*100%/3) 100%, calc(3*100%/3) 100%}
+    25%{color: orange;}
+    37.5%{background-position:calc(0*100%/3) 0   , calc(1*100%/3) 0   , calc(2*100%/3) 0   , calc(3*100%/3) 100%}
+    50%  {background-position:calc(0*100%/3) 0   , calc(1*100%/3) 0   , calc(2*100%/3) 0   , calc(3*100%/3) 0   }
+    62.5%{background-position:calc(0*100%/3) 100%, calc(1*100%/3) 0   , calc(2*100%/3) 0   , calc(3*100%/3) 0   }
+    75%  {background-position:calc(0*100%/3) 100%, calc(1*100%/3) 100%, calc(2*100%/3) 0   , calc(3*100%/3) 0   }
+    75%{color: green;}
+    87.5%{background-position:calc(0*100%/3) 100%, calc(1*100%/3) 100%, calc(2*100%/3) 100%, calc(3*100%/3) 0   }
+    100% {background-position:calc(0*100%/3) 100%, calc(1*100%/3) 100%, calc(2*100%/3) 100%, calc(3*100%/3) 100%}
+  }
+
+  /* 5 bouncing "dots" different colors */
+  .box {
+    position: absolute;
+    top:39%;
+    left:8%;
+    align-self: flex-end;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-delay: var(--delay);
+    background-color: var(--dotColor);
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin: 0 auto 0 auto;
+    transform-origin: bottom;
+}
+.bounce-1 {
+    animation-name: bounce-1;
+    animation-timing-function: linear;
+    --delay: .15s;
+    --dotColor: red;
+}
+
+.bounce-2 {
+  animation-name: bounce-1;
+  animation-timing-function: linear;
+  --delay: .30s;
+  left: 9%;
+  --dotColor:orange;
+}
+.bounce-3 {
+  animation-name: bounce-1;
+  animation-timing-function: linear;
+  --delay: .45s;
+  left: 10%;
+  --dotColor: yellow;
+}
+.bounce-4 {
+  animation-name: bounce-1;
+  animation-timing-function: linear;
+  --delay: .6s;
+  left: 11%;
+  --dotColor: green;
+}
+.bounce-5 {
+  animation-name: bounce-1;
+  animation-timing-function: linear;
+  --delay: .75s;
+  left: 12%;
+  --dotColor: indigo;
+}
+
+
+
+
+
+@keyframes bounce-1 {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+}
