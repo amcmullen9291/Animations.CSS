@@ -111,6 +111,9 @@ left: 15%;
   }
 
   #loadingBar1{
+      position: absolute;
+      top: 50%;
+      left: 35%;
     --s:10px;
     --n:10;
     color:red;
@@ -119,15 +122,27 @@ left: 15%;
   }
 
   #loadingBar2{
+    position:absolute;
+    top: 62%;
+    left: 45%;
     --g:0px;
     color: rgb(59, 58, 58);
     --speed: 2.5s;
   }
 
   #loadingBar3{
+    position:absolute;
+    top: 76%;
+    left: 45%;
     --s:25px;
     --g:8px;
     border-radius:50px;
     color:orange;
     --speed: 3s;
+  }
+
+  #page4Home{
+      position:absolute;
+      top: 9%;
+      text-decoration: underline;
   }

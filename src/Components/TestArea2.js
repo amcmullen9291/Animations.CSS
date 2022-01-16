@@ -11,9 +11,8 @@ function TestArea2(props) {
  <div class="loader" id="loader2"></div>
  <div class="loader" id="loader3"></div>
  <div class="loader" id="loader4"></div> 
- <div id= "loaderText">Loading...</div>
         <div>
-            <center><Link to={"/"} className="homeLink"></Link></center>
+            <center><Link to={"/"} className="homeLink" id="page4Home"></Link></center>
         </div>
         <br/>
  <div class="loadingBar" id="loadingBar1"></div><br/>
